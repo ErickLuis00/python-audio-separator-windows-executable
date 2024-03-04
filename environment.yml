@@ -1,0 +1,19 @@
+# CHECK COMPATIBLE TORCH VERSIONS ONNXRNTIME GPU COMPATIBILITY
+# https://pytorch.org/get-started/previous-versions/
+# https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html
+
+# conda env create -f environment.yml
+name: audio_separator_cuda_windows_exe
+channels:
+  - conda-forge
+  - default
+dependencies:
+  - pyinstaller
+  - pip:
+    - onnxruntime-gpu==1.17
+    - audio-separator[gpu]
+    - pip:
+      - torch==2.1.2
+      - torchvision==0.16.2
+      - torchaudio==2.1.2
+      - index-url: https://download.pytorch.org/whl/cu118
