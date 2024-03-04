@@ -6,7 +6,7 @@ INSTALL WITH CONDA:
 
 COMPILE TO WINDOWS EXECUTABLE:
 
-`pyinstaller .\main.py --clean --add-binary "C:\Users\User\miniconda3\envs\audio_separator_cuda_windows_exe\Lib\site-packages\onnxruntime\capi\*;onnxruntime/capi/" --noconfirm --collect-all audio_separator`
+`pyinstaller .\main.py --clean --add-binary "C:\Users\User\miniconda3\envs\audio_separator_cuda_windows_exe\Lib\site-packages\onnxruntime\capi\*;onnxruntime/capi/" --add-data ".\simple_model.onnx:." --noconfirm --collect-all audio_separator`
 
 USAGE
 
